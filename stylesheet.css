@@ -1,0 +1,155 @@
+body {
+    font-family: "Lucida Console", Monaco, monospace;
+    line-height: 1.2;
+    background: #0c0c0c url("background.jpg") no-repeat;
+    background-size: cover;
+    background-attachment: fixed;
+    font-size: 100%;
+    color: #000000
+}
+header {
+    background-color: #ffffff;
+    max-width: 100%;
+    padding: 15px 40px;
+    border-style: solid;
+    border-width: 0 0 6px 6px;
+    border-radius: 0 0 0 25px;
+    border-color: #969696;
+    margin: 0;
+    color: black;
+    text-align: center;
+    position: sticky;
+    top: 0;
+    font-size: 200%;
+    z-index: 1;
+    opacity: 0.8;
+    filter: alpha(opacity=80); /* For IE8 and earlier */
+    display: block;
+}
+    header:hover {
+        opacity: 1;
+        filter: alpha(opacity=100); /* For IE8 and earlier */
+    }
+section {
+    text-align: justify;
+    background-color: #ffffff;
+    max-width: 70%;
+    padding: 40px;
+    border: 6px solid;
+    border-radius: 25px 0px 25px 25px;
+    border-color: #969696;
+    margin: 25px 15% 25px 15%;
+    color: inherit;
+    position: relative center;
+    opacity: 0.8;
+    filter: alpha(opacity=80); /* For IE8 and earlier */
+}
+    section:hover {
+        opacity: 1;
+        filter: alpha(opacity=100); /* For IE8 and earlier */
+    }
+section.clearfix::after {
+	content: "";
+	clear: both;
+	display: table;
+	z-index: -1;
+}
+h1 {
+	font-size: 200%;
+	color: inherit;
+}
+h2 {
+	font-size: 150%;
+	color: inherit;
+}
+blockquote {
+	text-indent: 27px;
+	font-size: 75%;
+	word-spacing: 0.5px;
+	letter-spacing: -1px;
+}
+abbr {
+	text-decoration: none;
+	font-style: oblique;
+}
+p {
+	text-indent: 15px;
+	font-size: 100%;
+	word-spacing: 1px;
+	letter-spacing: 0;
+    margin-bottom: 15px;
+}
+img.side {
+	position: relative;
+	clear: left ;
+	margin-left: 10px;
+	float: right;
+}
+div {
+
+}
+div.sidetext {
+	color: white;
+	position: relative;
+	font-size: 75%;
+	clear: left ;
+	margin-left: 10px;
+	float: right;
+	font-style: oblique;
+}
+em {
+	font-style: italic;
+}
+strong {
+	font-weight: bold;
+}
+a.new {
+	text-decoration: underline;
+}
+a.new:link, a.new:visited {
+	color: blue;
+}
+a.new:hover {
+	color: red;
+}
+a.new:active {
+	color: white;
+}
+ul {
+    float: none;
+    border-style: solid;
+    list-style-type: none;
+    margin: 25px 10px;
+    padding: 0;
+    border-color: #969696;
+    border-width: 6px;
+    width: 10%;
+    background-color: #f1f1f1;
+    position: fixed;
+    height: auto;
+    max-height: 70%;
+    overflow: auto;
+    border-radius: 25px 0px 25px 25px;
+    opacity: 0.8;
+    filter: alpha(opacity=80); /* For IE8 and earlier */
+}
+ul:hover {
+    opacity: 1;
+    filter: alpha(opacity=100); /* For IE8 and earlier */
+    }
+li a {
+    display: block;
+    color: #000;
+    padding: 8px 16px;
+    text-decoration: none;
+}
+
+li a.active {
+        background-color: #969696;
+        color: white;
+}
+
+li a:hover:not(.active) {
+        background-color: #555;
+        color: white;
+}
