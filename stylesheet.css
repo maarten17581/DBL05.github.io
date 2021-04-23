@@ -2,6 +2,7 @@ body {
     font-family: "Lucida Console", Monaco, monospace;
     line-height: 1.2;
     background: #0c0c0c url("background.jpg") no-repeat;
+	background-color: #ffffff;
     background-size: cover;
     background-attachment: fixed;
     font-size: 100%;
