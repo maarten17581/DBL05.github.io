@@ -15,7 +15,15 @@
         </div>
         <div class="row">
             <div class="col-2 buttonMenu">
-                <input type="button" name="input" value="Upload data">
+                <div id="globalFilter">
+                    <div id="selection">
+
+                    </div>
+                    <input type="button" name="+" id="+" value="+" onclick="makeNewFilter()">
+                    <input type="button" name="submit" id="submit" value="Apply" onclick="getGlobalFilter()">
+                </div><br>
+                <input type="file" name="data" id="data" value="Select Data"><br>
+                <input type="button" name="upload" id="upload" value="Upload Data" onclick="uploadData()">
             </div>
             <div class="col-10 row" id="visualise">
                 <div class="col-12" id="add">
