@@ -17,6 +17,7 @@ function addFrame() {
                     <option value='Circle'> Circle </option>
                     <option value='Graph'> Graph </option>
                     <option value='Scatter'> Scatter </option>
+                    <option value='Table'> Table </option>
                 </select>
                 <input type="button" name="select" value="select" onclick="makeVisualisation('`+amountOfFrames+`', document.getElementById('`+amountOfFrames+`select').value)">
             <div class="middle">
@@ -48,7 +49,14 @@ function makeVisualisation(id, value) {
 
     const div = document.createElement("div");
 
-    div.className="middle";
-    div.innerHTML=`The visualisation is `+value;
+    //Switch that selects the right function for creating desired visualisation.
     document.getElementById(id+"visual").appendChild(div);
+    switch (value) {
+        case 'Table':
+            div.id = 'table_date';
+            fillTable(data);
+        break;
+        default:
+            div.innerHTML=`The visualisation is `+value;
+    }
 }

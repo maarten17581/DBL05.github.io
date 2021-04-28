@@ -5,7 +5,10 @@
     <meta charset="utf-8" />
     <title>mainPage</title>
     <link rel="stylesheet" href="stylesheet.css">
+    <script src="d3.js"></script>
     <script src="functional.js"></script>
+    <script src="csvReader.js"></script>
+
     <!--<link rel="stylesheet" href="RESET.css">-->
 </head>
 <body>
@@ -15,7 +18,7 @@
         </div>
         <div class="row">
             <div class="col-2 buttonMenu">
-                <input type="button" name="input" value="Upload data">
+                <input type="button" name="input" onclick="fillTable(data)" value="Upload data">
             </div>
             <div class="col-10 row" id="visualise">
                 <div class="col-12" id="add">
@@ -26,5 +29,6 @@
             </div>
         </div>
     </div>
+
 </body>
 </html>
