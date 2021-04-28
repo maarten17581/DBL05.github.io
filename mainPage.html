@@ -4,27 +4,27 @@
 <head>
     <meta charset="utf-8" />
     <title>mainPage</title>
+    <link rel="stylesheet" href="stylesheet.css">
+    <script src="functional.js"></script>
     <!--<link rel="stylesheet" href="RESET.css">-->
-    <!--<link rel="stylesheet" href="stylesheet.css">-->
 </head>
 <body>
-    <header>Lorum Ipsum</header>
-    <ul>
-        <li><a class="active" href="mainPage.html">Home</a></li>
-        <li><a href="mainPage.html">Python</a></li>
-        <li><a href="mainPage.html">JavaScript</a></li>
-        <li><a href="mainPage.html">Versus</a></li>
-    </ul>
-    <section class="clearfix">
-        <h1>Lorum Ipsum</h1>
-        <p>
-            Lorum Ipsum
-            <a class="new" href="https://www.google.com" target="_blank">Google</a>
-        </p>
-        <p>
-            Lorum Ipsum
-        </p>
-    </section>
-    <!--<script src="script.js"></script>-->
+    <div class="container" id="container">
+        <div class="row">
+            <header class="col-12">Lorum Ipsum</header>
+        </div>
+        <div class="row">
+            <div class="col-2 buttonMenu">
+                <input type="button" name="input" value="Upload data">
+            </div>
+            <div class="col-10 row" id="visualise">
+                <div class="col-12" id="add">
+                    <div class="visual">
+                        <input type="button" name="add" value="+" onclick="addFrame()" class="addButton">
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
 </body>
 </html>

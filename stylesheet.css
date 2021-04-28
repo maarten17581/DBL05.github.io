@@ -2,30 +2,38 @@ body {
     font-family: "Lucida Console", Monaco, monospace;
     line-height: 1.2;
     background: #0c0c0c url("background.jpg") no-repeat;
-	background-color: #ffffff;
+	background-color: #cac7c7;
     background-size: cover;
     background-attachment: fixed;
     font-size: 100%;
-    color: #000000
+    color: #000000;
+    padding: 0px;
 }
+
+html, body{
+    height: 100%;
+    margin: 0;
+}
+
 header {
     background-color: #ffffff;
     max-width: 100%;
     padding: 15px 40px;
-    border-style: solid;
-    border-width: 0 0 6px 6px;
-    border-radius: 0 0 0 25px;
-    border-color: #969696;
-    margin: 0;
+    border-bottom-style: solid;
+    border-bottom-width: 0 0 6px 6px;
+    border-bottom-color: #707070;
+    margin: 0px;
     color: black;
     text-align: center;
     position: sticky;
     top: 0;
-    font-size: 200%;
+    font-size: 50px;
     z-index: 1;
     opacity: 0.8;
     filter: alpha(opacity=80); /* For IE8 and earlier */
     display: block;
+    height: 16.66%;
+    line-height: auto;
 }
     header:hover {
         opacity: 1;
@@ -120,15 +128,12 @@ ul {
     float: none;
     border-style: solid;
     list-style-type: none;
-    margin: 25px 10px;
     padding: 0;
     border-color: #969696;
     border-width: 6px;
-    width: 10%;
     background-color: #f1f1f1;
     position: fixed;
     height: auto;
-    max-height: 70%;
     overflow: auto;
     border-radius: 25px 0px 25px 25px;
     opacity: 0.8;
@@ -154,3 +159,118 @@ li a:hover:not(.active) {
         background-color: #555;
         color: white;
 }
+
+.buttonMenu {
+    border-right-style: solid;
+    border-right-width: 0 0 6px 6px;
+    border-right-color: #707070;
+    border-bottom-style: solid;
+    border-bottom-width: 0 0 6px 6px;
+    border-bottom-color: #707070;
+    min-height: 100%;
+    padding: 0;
+    margin: 0;
+    position: -webkit-sticky;
+    position: sticky;
+    top: 0; 
+}
+
+.visual {
+    width: auto;
+    margin: 10px;
+    min-height: 250px;
+    border-style: solid;
+    border-radius: 10px;
+    border-width: 3px;
+    border-color: #000000;
+    text-align: center;
+    position: relative;
+}
+
+.middle {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    -ms-transform: translate(-50%, -50%);
+    transform: translate(-50%, -50%);
+}
+
+.addButton {
+    display: inline-block;
+    padding: 15px 25px;
+    font-size: 24px;
+    cursor: pointer;
+    text-align: center;
+    text-decoration: none;
+    outline: none;
+    color: #fff;
+    background-color: #4CAF50;
+    border: none;
+    border-radius: 15px;
+    box-shadow: 0 9px #999;
+    margin: 0;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    -ms-transform: translate(-50%, -50%);
+    transform: translate(-50%, -50%);
+}
+
+.removeButton {
+    background-color: #f4511e;
+    border: none;
+    border-radius: 7px;
+    color: white;
+    padding: 4px 8px;
+    text-align: center;
+    font-size: 16px;
+    margin: 0;
+    opacity: 0.6;
+    transition: 0.3s;
+    display: inline-block;
+    text-decoration: none;
+    cursor: pointer;
+    float: right;
+}
+
+.removeButton:hover {
+    opacity: 1;
+}
+
+.container {
+    margin: auto;
+    width: 1200px;
+    background-color: #ffffff;
+    margin-top: 0px;
+    margin-bottom: 0px;
+    padding: 0px;
+    min-height: 100vh;
+}
+
+* {
+    box-sizing: border-box;
+}
+
+[class*="col-"] {
+    float: left;
+    padding: 15px;
+}
+
+.row::after {
+    content: "";
+    clear: both;
+    display: table;
+}
+
+.col-1 {width: 8.33%;}
+.col-2 {width: 16.66%;}
+.col-3 {width: 25%;}
+.col-4 {width: 33.33%;}
+.col-5 {width: 41.66%;}
+.col-6 {width: 50%;}
+.col-7 {width: 58.33%;}
+.col-8 {width: 66.66%;}
+.col-9 {width: 75%;}
+.col-10 {width: 83.33%;}
+.col-11 {width: 91.66%;}
+.col-12 {width: 100%;}
