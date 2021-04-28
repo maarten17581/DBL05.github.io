@@ -1,50 +1,30 @@
 <!DOCTYPE html>
 
 <html lang="en" xmlns="http://www.w3.org/1999/xhtml">
-
 <head>
     <meta charset="utf-8" />
     <title>mainPage</title>
-    <script src="d3.js"></script> <!-- D3.js library -->
-    <script src="script.js"></script>
+    <link rel="stylesheet" href="stylesheet.css">
+    <script src="functional.js"></script>
     <!--<link rel="stylesheet" href="RESET.css">-->
-
 </head>
-
 <body>
-    <header>Lorum Ipsum</header>
-    <ul>
-        <li><a class="active" href="mainPage.html">Home</a></li>
-        <li><a href="mainPage.html">Python</a></li>
-        <li><a href="mainPage.html">JavaScript</a></li>
-        <li><a href="mainPage.html">Versus</a></li>
-    </ul>
-    <section class="clearfix">
-        <h1>Lorum Ipsum</h1>
-        <p>
-            Lorum Ipsum
-            <a class="new" href="https://www.google.com" target="_blank">Google</a>
-        </p>
-        <p>
-            Lorum Ipsum
-        </p>
-    </section>
-
-    <button onClick="loadButtonWrapper()">Load data</button>
-    <table style="width:100%">
-        <tr>
-            <th id="table_date">date</th>
-            <th id="table_fromId">fromId</th>
-            <th id="table_fromEmail">fromEmail</th>
-            <th id="table_fromJobtitle">fromJobTitle</th>
-            <th id="table_toId">toId</th>
-            <th id="table_toEmail">toEmail</th>
-            <th id="table_toJobtitle">toJobTitle</th>
-            <th id="table_messageType">messageType</th>
-            <th id="table_sentiment">sentiment</th>
-    </table>
-
-
+    <div class="container" id="container">
+        <div class="row">
+            <header class="col-12">Lorum Ipsum</header>
+        </div>
+        <div class="row">
+            <div class="col-2 buttonMenu">
+                <input type="button" name="input" value="Upload data">
+            </div>
+            <div class="col-10 row" id="visualise">
+                <div class="col-12" id="add">
+                    <div class="visual">
+                        <input type="button" name="add" value="+" onclick="addFrame()" class="addButton">
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
 </body>
-
 </html>
