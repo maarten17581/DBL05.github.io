@@ -39,8 +39,8 @@ function findVertices(data) {
   //and a set amount of space does not have to be reserved when declaring an object in advance,
   //this essentially allows you to store all unique vertices in the dataset once in O(n) time.
   data.forEach(function(r) {
-      verticesObject[r.fromId] = {"id" : r.fromId};
-      verticesObject[r.toId] = {"id": r.toId};
+      verticesObject[r.fromId] = {};
+      verticesObject[r.toId] = {};
     });
     
     //Return all keys of the objects properties as an array: 
