@@ -48,13 +48,13 @@ function makeVisualisation(id, value) {
     document.getElementById(id+"middle").parentNode.removeChild(document.getElementById(id+"middle"));
 
     const div = document.createElement("div");
+    div.id = 'vis_' + id;
 
     //Switch that selects the right function for creating desired visualisation.
     document.getElementById(id+"visual").appendChild(div);
     switch (value) {
         case 'Table':
-            div.id = 'table_date';
-            fillTable(data);
+            createTable(data, div.id); //Call that creates the visualisation also requires the id of the correct div
         break;
         default:
             div.innerHTML=`The visualisation is `+value;
