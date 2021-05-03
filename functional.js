@@ -44,6 +44,9 @@ function removeFrame(id) {
     document.getElementById(id).parentNode.removeChild(document.getElementById(id));
 }
 
+
+//FUNCTION EXPECTS GLOBAL VARIABLES: 'data'.
+//Function that generates a visulisation for the data iset in the global variable 'data'.
 function makeVisualisation(id, value) {
     document.getElementById(id+"middle").parentNode.removeChild(document.getElementById(id+"middle"));
 
@@ -55,8 +58,11 @@ function makeVisualisation(id, value) {
     switch (value) {
         case 'Table':
             createTable(data, div.id); //Call that creates the visualisation also requires the id of the correct div
-        break;
+            break;
+        case 'Matrix':
+            createAdjMatrix(div.id, data); //Calll that creates adjacancy matrix for the data.
+            break;
         default:
-            div.innerHTML=`The visualisation is `+value;
+            div.innerHTML=`An unexpected error occured when trying to generate the visualisation: `+value;
     }
 }

@@ -1,5 +1,7 @@
 //A script that can read data from csvFiles. Sets the variable 'loaded' to true after all data has been loaded.
 // Additionally, contains a function to extract the nodes from the provided data.
+//This scripts creates global variables 'data' which stores the data extracted from the csv file and 'vertices',
+//which is an array that contains every unique vertice in the data once.
 
 loaded = false;
 data = [];
@@ -7,7 +9,7 @@ vertices = [];
 
 //Reads the csv file as a 2d array (d) which is put into an array (data).
 // Additionally, sets 'loaded' to true to indicate that the asyncrhonous part is done.
-d3.csv("./enron-v1.csv", d3.autoType).then(function (d) {
+d3.csv("./test.csv", d3.autoType).then(function (d) {
 
   console.log(findVertices(d)); // DEBUGGING PURPOSES
   
@@ -39,15 +41,13 @@ function findVertices(data) {
   //and a set amount of space does not have to be reserved when declaring an object in advance,
   //this essentially allows you to store all unique vertices in the dataset once in O(n) time.
   data.forEach(function(r) {
-      verticesObject[r.fromId] = {};
-      verticesObject[r.toId] = {};
+      verticesObject[r.fromId] = undefined;
+      verticesObject[r.toId] = undefined;
     });
     
     //Return all keys of the objects properties as an array: 
     //this yields an array that contains all unqiue vertices in the dataset once.
-    
-    return verticesObject;
-    //return Object.keys(verticesObject);
+    return Object.keys(verticesObject);
 }
 
 
