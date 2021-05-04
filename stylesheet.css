@@ -15,20 +15,20 @@ html, body{
 }
 
 header {
-    background-color: #ffffff;
+    background-color: #242424;
     max-width: 100%;
     padding: 15px 40px;
     border-bottom-style: solid;
     border-bottom-width: 0 0 6px 6px;
     border-bottom-color: #707070;
     margin: 0px;
-    color: black;
+    color: #969696;
     text-align: center;
     position: sticky;
     top: 0;
     font-size: 50px;
     z-index: 1;
-    opacity: 0.8;
+    /* opacity: 0.8; */
     filter: alpha(opacity=80); /* For IE8 and earlier */
     display: block;
     height: 16.66%;
@@ -166,6 +166,8 @@ li a:hover:not(.active) {
     border-bottom-style: solid;
     border-bottom-width: 0 0 6px 6px;
     border-bottom-color: #707070;
+    background-color: #3f3f3f;
+    color: #969696;
     min-height: 100%;
     padding: 0;
     margin: 0;
@@ -197,7 +199,7 @@ li a:hover:not(.active) {
 
 .middle2 {
     min-height: 100px;
-    padding-left: 50px;
+    padding-left: 0px;
     padding-top: 10px;
 }
 
@@ -212,22 +214,26 @@ li a:hover:not(.active) {
     color: #fff;
     background-color: #4CAF50;
     border: none;
-    border-radius: 15px;
-    box-shadow: 0 9px #999;
+    /* border-radius: 15px;
+    box-shadow: 0 9px #999; */
     margin: 0;
     position: absolute;
+}
+
+.addButton:hover {
+    background-color: #126322;
 }
 
 .removeButton {
     background-color: #f4511e;
     border: none;
-    border-radius: 7px;
+    border-radius: 5px;
     color: white;
     padding: 4px 8px;
     text-align: center;
     font-size: 16px;
     margin: 0;
-    opacity: 0.6;
+    /* opacity: 0.6; */
     transition: 0.3s;
     display: inline-block;
     text-decoration: none;
@@ -236,13 +242,13 @@ li a:hover:not(.active) {
 }
 
 .removeButton:hover {
-    opacity: 1;
+    background-color: #9e3720;
 }
 
 .container {
     margin: auto;
     width: 100%;
-    background-color: #ffffff;
+    background-color: #5e5e5e;
     margin-top: 0px;
     margin-bottom: 0px;
     padding: 0px;
