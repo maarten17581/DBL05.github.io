@@ -275,3 +275,30 @@ li a:hover:not(.active) {
 .col-10 {width: 83.33%;}
 .col-11 {width: 91.66%;}
 .col-12 {width: 100%;}
+
+/* MATRIX VISUALISATION*/
+.grid {
+    stroke: #9A8B7A;
+	stroke-width: 1px; fill: #FECC22; /* CELL FILL COLOUR */
+} 
+.arc {
+    stroke: #9A8B7A;
+	fill: none;
+}
+.node {    
+	fill: #c1ebc3;
+	stroke: #9A8B7A; 
+	stroke-width: 1px;
+}
+circle.active {
+	fill: #22fe47;
+}
+path.active {
+	stroke: #FE9922;
+}
+circle.source {
+	fill: #93C464;
+}
+circle.target {
+	fill: #41A368;
+}

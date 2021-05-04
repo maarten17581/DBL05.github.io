@@ -43,13 +43,26 @@ function removeFrame(id) { // delete an visualisation div
     document.getElementById(id).parentNode.removeChild(document.getElementById(id));
 }
 
-function makeVisualisation(id, value) { // set div to specific visualisation
+//FUNCTION EXPECTS GLOBAL VARIABLES: 'data'.
+//Function that generates a visulisation for the data iset in the global variable 'data'.
+function makeVisualisation(id, value) {
     document.getElementById(id+"middle").parentNode.removeChild(document.getElementById(id+"middle"));
 
     const div = document.createElement("div");
+    div.id = 'vis_' + id;
 
-    div.innerHTML=`The visualisation is `+value;
+    //Switch that selects the right function for creating desired visualisation.
     document.getElementById(id+"visual").appendChild(div);
+    switch (value) {
+        case 'Table':
+            createTable(data, div.id); //Call that creates the visualisation also requires the id of the correct div
+            break;
+        case 'Matrix':
+            createAdjMatrix(div.id, data); //Call that creates adjacancy matrix for the data.
+            break;
+        default:
+            div.innerHTML=`An unexpected error occured when trying to generate the visualisation: `+value;
+    }
 }
 
 var filterAmount = 0;

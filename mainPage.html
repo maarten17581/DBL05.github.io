@@ -5,7 +5,11 @@
     <meta charset="utf-8" />
     <title>mainPage</title>
     <link rel="stylesheet" href="stylesheet.css">
+    <script src="d3.js"></script>
     <script src="functional.js"></script>
+    <script src="csvReader.js"></script>
+    <script src="vis_adjMatrix.js"></script>
+
     <!--<link rel="stylesheet" href="RESET.css">-->
 </head>
 <body>
@@ -42,6 +46,7 @@
                                 <option value='Circle'> Circle </option>
                                 <option value='Graph'> Graph </option>
                                 <option value='Scatter'> Scatter </option>
+                                <option value='Table'> Table </option>
                             </select>
                             <input type="button" name="select" value="select" onclick="makeVisualisation('0', document.getElementById('0select').value)">
                         </div>

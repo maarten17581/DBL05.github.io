@@ -9,3 +9,8 @@ date,fromId,fromEmail,fromJobtitle,toId,toEmail,toJobtitle,messageType,sentiment
 2001-11-14,87,mark.whitt@enron.com,Unknown,49,barry.tycholiz@enron.com,Vice President,TO,0.0136986301369863
 2002-03-26,57,chris.germany@enron.com,Employee,57,chris.germany@enron.com,Employee,TO,0.0
 2000-08-20,87,mark.whitt@enron.com,Unknown,84,gerald.nemec@enron.com,Unknown,TO,0.0
+2000-08-20,87,mark.whitt@enron.com,Unknown,84,gerald.nemec@enron.com,Unknown,TO,0.0
+2000-08-20,87,mark.whitt@enron.com,Unknown,84,gerald.nemec@enron.com,Unknown,TO,0.0
+2000-08-20,87,mark.whitt@enron.com,Unknown,84,gerald.nemec@enron.com,Unknown,TO,0.0
+2001-09-25,69,debra.perlingiere@enron.com,Employee,105,patrice.l.mims@enron.com,Unknown,TO,0.0
+2001-09-25,69,debra.perlingiere@enron.com,Employee,105,patrice.l.mims@enron.com,Unknown,TO,0.0
