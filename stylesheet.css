@@ -172,6 +172,7 @@ li a:hover:not(.active) {
     position: -webkit-sticky;
     position: sticky;
     top: 0; 
+    min-width: 200px;
 }
 
 .visual {
@@ -240,7 +241,7 @@ li a:hover:not(.active) {
 
 .container {
     margin: auto;
-    width: 1200px;
+    width: 100%;
     background-color: #ffffff;
     margin-top: 0px;
     margin-bottom: 0px;
