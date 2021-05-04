@@ -19,16 +19,32 @@
                     <div id="selection">
 
                     </div>
-                    <input type="button" name="+" id="+" value="+" onclick="makeNewFilter()">
-                    <input type="button" name="submit" id="submit" value="Apply" onclick="getGlobalFilter()">
+                    <div>
+                       <input type="button" name="+" id="+" value="+" onclick="makeNewFilter()">
+                        <input type="button" name="submit" id="submit" value="Apply" onclick="getGlobalFilter()"> 
+                    </div>
                 </div><br>
-                <input type="file" name="data" id="data" value="Select Data"><br>
-                <input type="button" name="upload" id="upload" value="Upload Data" onclick="uploadData()">
+                <div class="middle2">
+                    <input type="button" name="add" value="+" onclick="addFrame()" class="addButton">
+                </div>
+                <div>
+                    <input type="file" name="data" id="data" value="Select Data"><br>
+                    <input type="button" name="upload" id="upload" value="Upload Data" onclick="uploadData()">
+                </div>
             </div>
             <div class="col-10 row" id="visualise">
-                <div class="col-12" id="add">
-                    <div class="visual">
-                        <input type="button" name="add" value="+" onclick="addFrame()" class="addButton">
+                <div class="col-12" id="0">
+                    <div class="visual" id="0visual">
+                        <input type="button" name="add" value="x" onclick="removeFrame('0')" class="removeButton" class="middle">
+                        <div class="middle" id="0middle">
+                            <select name="Visualisation" id="0select">
+                                <option selected value='Matrix'> Matrix </option>
+                                <option value='Circle'> Circle </option>
+                                <option value='Graph'> Graph </option>
+                                <option value='Scatter'> Scatter </option>
+                            </select>
+                            <input type="button" name="select" value="select" onclick="makeVisualisation('0', document.getElementById('0select').value)">
+                        </div>
                     </div>
                 </div>
             </div>

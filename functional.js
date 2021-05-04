@@ -2,7 +2,9 @@ var amountOfFrames = 0;
 
 function addFrame() {
 
-    document.getElementById("add").parentNode.removeChild(document.getElementById("add")); // remove current "+" div
+    amountOfFrames++;
+
+    //document.getElementById("add").parentNode.removeChild(document.getElementById("add")); // remove current "+" div
 
     const div = document.createElement("div"); // add visualisation div
 
@@ -19,23 +21,21 @@ function addFrame() {
                     <option value='Scatter'> Scatter </option>
                 </select>
                 <input type="button" name="select" value="select" onclick="makeVisualisation('`+amountOfFrames+`', document.getElementById('`+amountOfFrames+`select').value)">
-            <div class="middle">
+            </div>
         </div>
     `;
     document.getElementById('visualise').appendChild(div);
 
-    const div2 = document.createElement("div"); // add "+" div
+    //const div2 = document.createElement("div"); // add "+" div
 
-    div2.className="col-12";
-    div2.id="add";
-    div2.innerHTML=`
-        <div class="visual">
-            <input type="button" name="add" value="+" onclick="addFrame()" class="addButton">
-        </div>
-    `;
-    document.getElementById('visualise').appendChild(div2);
-
-    amountOfFrames++;
+    //div2.className="col-12";
+    //div2.id="add";
+    //div2.innerHTML=`
+    //    <div class="visual">
+    //        <input type="button" name="add" value="+" onclick="addFrame()" class="addButton">
+    //    </div>
+    //`;
+    //document.getElementById('visualise').appendChild(div2);
 }
 
 function removeFrame(id) { // delete an visualisation div
