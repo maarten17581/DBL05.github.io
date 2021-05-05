@@ -169,12 +169,17 @@ li a:hover:not(.active) {
     background-color: #3f3f3f;
     color: #969696;
     min-height: 100%;
-    padding: 0;
+    padding: 20px;
     margin: 0;
     position: -webkit-sticky;
     position: sticky;
     top: 0; 
-    min-width: 200px;
+    width: 220px;
+    float: left;
+}
+
+#visualise {
+    margin-left: 220px;
 }
 
 .visual {
