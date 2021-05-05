@@ -187,6 +187,7 @@ li a:hover:not(.active) {
     border-color: #000000;
     text-align: center;
     position: relative;
+    background-color: #969696;
 }
 
 .middle {
