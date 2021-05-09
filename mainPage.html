@@ -7,7 +7,8 @@
     <link rel="stylesheet" href="stylesheet.css">
     <script src="d3.js"></script>
     <script src="functional.js"></script>
-    <script src="csvReader.js"></script>
+    <script src="dataReader.js"></script>
+    <script src="csvParser.js"></script>
     <script src="vis_adjMatrix.js"></script>
 
     <!--<link rel="stylesheet" href="RESET.css">-->
@@ -21,7 +22,7 @@
             <div class="buttonMenu">
                 <div>
                     <input type="file" name="data" id="data" value="Select Data"><br>
-                    <input type="button" name="upload" id="upload" value="Upload Data" onclick="uploadData()">
+                    <input type="button" name="upload" id="upload" value="Upload Data" onclick="fetchDataFile()">
                 </div>
                 <div class="middle2">
                     <input type="button" name="add" value="+" onclick="addFrame()" class="addButton">
