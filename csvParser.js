@@ -7,23 +7,28 @@ loaded = false;
 data = [];
 vertices = [];
 
+//Since browsers cannot obtain filepath out of security issues,
+//take data parsed into a string as input and then read using d3.csv.parse.
 //Reads the csv file as a 2d array (d) which is put into an array (data).
-// Additionally, sets 'loaded' to true to indicate that the asyncrhonous part is done.
-d3.csv("./test.csv", d3.autoType).then(function (d) {
+//Additionally, sets 'loaded' to true to indicate that the asyncrhonous part is done.
+function csvStringReader(dataString) {
 
-  console.log(findVertices(d)); // DEBUGGING PURPOSES
-  
-  //At this point, d is an array 
-  d = d.sort(function (a, b) {
-    return d3.ascending(a.date, b.date); //Sorts the .csv in ascending order (in this case, based on the dates) 
-  });
+  console.log(d3.csvParse(dataString));
+  data = d3.csvParse(dataString);
+   /* d3.csv(dataString, d3.autoType).then(function (d) {
 
-  //Put data into another array that is accesible outside of the asynchrounous call, as well as an array of all unique vertices in the data.
-  data = d;
-  vertices = findVertices(d);
-  loaded = true;
-
-});
+      //At this point, d is an array 
+      d = d.sort(function (a, b) {
+        return d3.ascending(a.date, b.date); //Sorts the .csv in ascending order (in this case, based on the dates) 
+      });
+    
+      //Put data into another array that is accesible outside of the asynchrounous call, as well as an array of all unique vertices in the data.
+      data = d;
+      vertices = findVertices(d);
+      console.log(vertices); // DEBUGGING PURPOSES
+      loaded = true;
+    });*/
+}
 
 //INPUT: 2d array containing a dataset read from a csv using d3 as input.
 //RETURNS: an array containing all unique IDs found in the dataset (combined fromID and toID)

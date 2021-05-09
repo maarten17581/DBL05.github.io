@@ -129,12 +129,3 @@ function getGlobalFilter() { // get info from filters
         value.push(document.getElementById(filterAmount+"value").value);
     }
 }
-
-function uploadData()
-{
-    const file = document.getElementById("data").files;
-    if(file.substring(file.length-4, file.length-1) == "csv")
-    {
-        
-    }
-}
