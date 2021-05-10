@@ -3,7 +3,6 @@
 //This scripts creates global variables 'data' which stores the data extracted from the csv file and 'vertices',
 //which is an array that contains every unique vertice in the data once.
 
-loaded = false;
 data = [];
 vertices = [];
 
@@ -15,6 +14,7 @@ function csvStringReader(dataString) {
 
   console.log(d3.csvParse(dataString));
   data = d3.csvParse(dataString);
+  vertices = findVertices(data);
    /* d3.csv(dataString, d3.autoType).then(function (d) {
 
       //At this point, d is an array 
