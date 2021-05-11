@@ -7,11 +7,14 @@ function createAdjMatrix(visId, data) {
     width = 800;
     height = 800;
 
+    const zoom = d3.zoom()
+        .scaleExtent([1, 10])
+
     // THIS IS A TEST !!!! EXTREMELY BUGGY
     var tooltipDiv = d3.select("body").append("div")	
         .attr("class", "tooltip")	
         .style("width", "30px")
-        .style("height", "20px")
+        .style("height", "cellSizepx")
         .style("background", "lightsteelblue")		
         .style("opacity", 0)
         .style("position", "absolute")
@@ -39,31 +42,37 @@ function createAdjMatrix(visId, data) {
     });
     console.log(matrix); //DEBUGGING PURPOSES
 
+    var cellSize = 350 / vertices.length;
+
     //Generate an svg that will contain the adjancy matrix. Then create a g that will contain the matrix grid.
     //Then generate a rect for each element in 'matrix' array, which is put into the g (in order of the array).
     //Then, proceed to 'color' rects in the matrix for which there are edges by increasing their opacity.
     var svg = d3.select('#' + visId).append("svg")
         .attr("id", visId + 'svg')
-        .attr("width", 20*vertices.length+50)
-        .attr("height", 20*vertices.length+50)
+        .attr("width", cellSize*vertices.length+50)
+        .attr("height", cellSize*vertices.length+50)
+        //.attr("viewBox", [0,0, cellSize*vertices.length+50, cellSize*vertices.length+50])
+        .call(zoom.on("zoom", function (event) {
+            g.attr("transform", event.transform); 
+        }))
     
-    svg.append("g")
-        .attr("transform", "translate(50,50)")
+    g = svg.append("g")
+        .attr("transform", "translate(50,50)") 
         .selectAll("rect")
         .data(matrix)
         .enter()
         .append("rect")
         .attr("class", "grid")
-        .attr("width", 20)
-        .attr("height", 20)
-        .attr("x", d => d.x*20)
-        .attr("y", d => d.y*20)
+        .attr("width", cellSize)
+        .attr("height", cellSize)
+        .attr("x", d => d.x*cellSize)
+        .attr("y", d => d.y*cellSize)
         .style("fill-opacity", d => d.weight * 0.2)
 
         //Add 'mouseover' event to each rect in adjancy matrix, in order of 'data' array.
         .on("mouseover", function(event, d)  { 
             d3.select(this).style("fill", "#7AE7C7")
-            console.log(d3.pointer(event))
+        //    console.log(d3.pointer(event))
             // tooltipDiv.html("x: " + d3.pointer(event)[0] + "\ny: " + d3.pointer(event)[1] + "\nWeight: " + d.weight)
             //     .style("opacity", 1)
             //     .style("left", d3.pointer(event)[0] + 'px')
@@ -85,7 +94,7 @@ function createAdjMatrix(visId, data) {
 		.data(vertices)
 		.enter()
 		.append("text")
-		.attr("x", (d,i) => i * 20 + 10)
+		.attr("x", (d,i) => i * cellSize + cellSize/2)
 		.text(d => d)
 		.style("text-anchor","end")
 		.style("font-size","10px")
@@ -98,8 +107,12 @@ function createAdjMatrix(visId, data) {
 		.data(vertices)
 		.enter()
 		.append("text")
-		.attr("y",(d,i) => i * 20 + 10)
+		.attr("y",(d,i) => i * cellSize + cellSize/2)
 		.text(d => d)
 		.style("text-anchor","end")
 		.style("font-size","10px")
+}
+
+function computeVSize(size, vCount){
+    return size/vCount;
 }
