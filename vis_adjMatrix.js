@@ -7,8 +7,9 @@ function createAdjMatrix(visId, data) {
     width = 800;
     height = 800;
 
+    /*Adds a d3.zoom() object, currently commneted out because not in use.
     const zoom = d3.zoom()
-        .scaleExtent([1, 10])
+        .scaleExtent([1, 10])*/
 
     // THIS IS A TEST !!!! EXTREMELY BUGGY
     var tooltipDiv = d3.select("body").append("div")	
@@ -51,10 +52,10 @@ function createAdjMatrix(visId, data) {
         .attr("id", visId + 'svg')
         .attr("width", cellSize*vertices.length+50)
         .attr("height", cellSize*vertices.length+50)
-        //.attr("viewBox", [0,0, cellSize*vertices.length+50, cellSize*vertices.length+50])
+        /*Adds a zoom functionality below: commented out because of lack of use and performance issues when used on large data sets
         .call(zoom.on("zoom", function (event) {
             g.attr("transform", event.transform); 
-        }))
+        }))*/
     
     g = svg.append("g")
         .attr("transform", "translate(50,50)") 
@@ -86,6 +87,7 @@ function createAdjMatrix(visId, data) {
             //tooltipDiv.style("opacity", 0)
         })
 
+    /*Generates labels above and besides the matrix that correspond to the rows and columns of vertices. Commented out because of inusability on large datasets.
     //Generate a g above the adjancy matrix that will contain rotated labels, which correspond to the columns for outgoing edges in the matrix.
     d3.select('#' + visId + 'svg')
 		.append("g")
@@ -110,9 +112,6 @@ function createAdjMatrix(visId, data) {
 		.attr("y",(d,i) => i * cellSize + cellSize/2)
 		.text(d => d)
 		.style("text-anchor","end")
-		.style("font-size","10px")
-}
-
-function computeVSize(size, vCount){
-    return size/vCount;
+        .style("font-size","10px")
+        */
 }
