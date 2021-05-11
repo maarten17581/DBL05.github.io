@@ -15,14 +15,14 @@ html, body{
 }
 
 header {
-    background-color: #242424;
+    background-color: #759AC7;
     max-width: 100%;
     padding: 15px 40px;
     border-bottom-style: solid;
     border-bottom-width: 0 0 6px 6px;
-    border-bottom-color: #707070;
+    border-bottom-color: #485F7A;
     margin: 0px;
-    color: #969696;
+    color: #485F7A;
     text-align: center;
     position: sticky;
     top: 0;
@@ -162,11 +162,11 @@ li a:hover:not(.active) {
 .buttonMenu {
     border-right-style: solid;
     border-right-width: 0 0 6px 6px;
-    border-right-color: #707070;
+    border-right-color: #485F7A;
     border-bottom-style: solid;
     border-bottom-width: 0 0 6px 6px;
-    border-bottom-color: #707070;
-    background-color: #3f3f3f;
+    border-bottom-color: #485F7A;
+    background-color: #E3F0FF;
     color: #969696;
     min-height: 100%;
     padding: 20px;
@@ -189,10 +189,10 @@ li a:hover:not(.active) {
     border-style: solid;
     border-radius: 10px;
     border-width: 3px;
-    border-color: #000000;
+    border-color: #485F7A;
     text-align: center;
     position: relative;
-    background-color: #969696;
+    background-color: #E3F0FF;
 }
 
 .middle {
@@ -227,11 +227,11 @@ li a:hover:not(.active) {
 }
 
 .addButton:hover {
-    background-color: #126322;
+    background-color: #39AD50;
 }
 
 .removeButton {
-    background-color: #f4511e;
+    background-color: #FF4640;
     border: none;
     border-radius: 5px;
     color: white;
@@ -248,13 +248,13 @@ li a:hover:not(.active) {
 }
 
 .removeButton:hover {
-    background-color: #9e3720;
+    background-color: #E33E39;
 }
 
 .container {
     margin: auto;
     width: 100%;
-    background-color: #5e5e5e;
+    background-color: white;
     margin-top: 0px;
     margin-bottom: 0px;
     padding: 0px;
