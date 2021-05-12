@@ -159,6 +159,64 @@ li a:hover:not(.active) {
         color: white;
 }
 
+.topmenu {
+    background-color: #759AC7;
+    border-style: solid;
+    border-color: #396fb3;
+    padding: 20px;
+    height: 50px;
+    margin: 0;
+    text-align: center;
+    color: #000;
+}
+
+.topmenu:hover {
+    background-color: #618abd;
+}
+
+.sticky {
+    position: fixed;
+    top: 0;
+    width: 100%;
+}
+
+.title {
+    background-color: #759AC7;
+    text-align: center;
+    height: 200px;
+    left: 16.66%;
+    margin-top: 100px;
+    font-size: 50px;
+    padding: 75px 0;
+    line-height: 175px;
+    color: #485F7A;
+}
+
+.subtitle {
+    background-color: #E3F0FF;
+    text-align: center;
+    height: 200px;
+    left: 16.66%;
+    margin-top: 50px;
+    font-size: 50px;
+    padding: 75px 0;
+    line-height: 175px;
+    color: #000;
+    border-style: solid;
+    /*border-radius: 10px;*/
+    border-width: 3px;
+    border-color: #485F7A;
+}
+
+.textblock {
+    border-width: 3px;
+    border-color: #000;
+    border-style: solid;
+    margin-top: 10px;
+    margin-bottom: 10px;
+    height: 200px;
+}
+
 .buttonMenu {
     border-right-style: solid;
     border-right-width: 0 0 6px 6px;
@@ -171,7 +229,6 @@ li a:hover:not(.active) {
     min-height: 100%;
     padding: 20px;
     margin: 0;
-    position: -webkit-sticky;
     position: sticky;
     top: 0; 
     width: 220px;
@@ -259,6 +316,7 @@ li a:hover:not(.active) {
     margin-bottom: 0px;
     padding: 0px;
     min-height: 100vh;
+    background-image: linear-gradient(white, lightgray);
 }
 
 * {
