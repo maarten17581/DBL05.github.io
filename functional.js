@@ -66,6 +66,7 @@ function makeVisualisation(id, value) {
 }
 
 var filterAmount = 0;
+var removedFilters = [];
 
 var columns = ['FromId', 'ToId', 'Date', 'Sentiment'];
 
@@ -73,7 +74,8 @@ function setColumns(column) // set columns of the data for the filters
 {
     columns = column;
     document.getElementById('selection').innerHTML='';
-    makeNewFilter();
+    filterAmount = 0;
+    removedFilters = [];
 }
 
 function makeNewFilter() { // set an extra filter
@@ -113,6 +115,7 @@ function makeNewFilter() { // set an extra filter
 }
 
 function removeFilter(id) {
+    removedFilters.push(id);
     document.getElementById('selection').removeChild(document.getElementById(id+'globalSelectDiv'));
 }
 
@@ -122,10 +125,13 @@ function getGlobalFilter() { // get info from filters
     var sign = [];
     var value = [];
 
-    for(var i = 0; i <= filterAmount; i++)
+    for(var i = 0; i < filterAmount; i++)
     {
-        field.push(document.getElementById(filterAmount+"globalSelect").value);
-        sign.push(document.getElementById(filterAmount+"globalSign").value);
-        value.push(document.getElementById(filterAmount+"value").value);
+        if(!removedFilters.includes(i))
+        {
+            field.push(document.getElementById(i+"globalSelect").value);
+            sign.push(document.getElementById(i+"globalSign").value);
+            value.push(document.getElementById(i+"value").value);
+        }
     }
 }
