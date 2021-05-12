@@ -195,6 +195,11 @@ li a:hover:not(.active) {
     background-color: #E3F0FF;
 }
 
+.vis2 {
+    width: 50%;
+    float: left;
+}
+
 .middle {
     position: absolute;
     top: 50%;

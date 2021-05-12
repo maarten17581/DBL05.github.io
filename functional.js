@@ -8,7 +8,7 @@ function addFrame() {
 
     const div = document.createElement("div"); // add visualisation div
 
-    div.className="col-12";
+    div.className="vis2";
     div.id=amountOfFrames;
     div.innerHTML=`
         <div class="visual" id="`+amountOfFrames+`visual">
