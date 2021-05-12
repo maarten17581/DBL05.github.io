@@ -7,9 +7,8 @@ data = [];
 vertices = [];
 
 //Since browsers cannot obtain filepath out of security issues,
-//take data parsed into a string as input and then read using d3.csv.parse.
-//Reads the csv file as a 2d array (d) which is put into an array (data).
-//Additionally, sets 'loaded' to true to indicate that the asyncrhonous part is done.
+//take data parsed into a string as input and then read using d3.csvParse.
+//Reads the csv file into an array of objects, each object being a row and each object's properties being a column.=
 function csvStringReader(dataString) {
 
   console.log(d3.csvParse(dataString));
