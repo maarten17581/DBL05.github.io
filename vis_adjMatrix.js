@@ -3,7 +3,6 @@
 
 function createAdjMatrix(visId, data) { 
 
-    margin = {top: 50, left: 50, bottom: 10, right: 0}; //Reserve a space for the labels around the matrix.
     width = 800;
     height = 800;
 
@@ -43,7 +42,7 @@ function createAdjMatrix(visId, data) {
     });
     console.log(matrix); //DEBUGGING PURPOSES
 
-    var cellSize = 350 / vertices.length;
+    var cellSize = width / vertices.length;
 
     //Generate an svg that will contain the adjancy matrix. Then create a g that will contain the matrix grid.
     //Then generate a rect for each element in 'matrix' array, which is put into the g (in order of the array).
