@@ -252,6 +252,11 @@ li a:hover:not(.active) {
     background-color: #E3F0FF;
 }
 
+.vis2 {
+    width: 50%;
+    float: left;
+}
+
 .middle {
     position: absolute;
     top: 50%;
@@ -350,7 +355,7 @@ li a:hover:not(.active) {
 /* MATRIX VISUALISATION*/
 .grid {
     /* stroke: #9A8B7A; */
-	stroke-width: 1px; fill: #FECC22; /* CELL FILL COLOUR */
+	stroke-width: 1px; fill: red; /* CELL FILL COLOUR */
 } 
 .arc {
     stroke: #9A8B7A;
