@@ -292,7 +292,7 @@ li a:hover:not(.active) {
 /* MATRIX VISUALISATION*/
 .grid {
     /* stroke: #9A8B7A; */
-	stroke-width: 1px; fill: #FECC22; /* CELL FILL COLOUR */
+	stroke-width: 1px; fill: red; /* CELL FILL COLOUR */
 } 
 .arc {
     stroke: #9A8B7A;
